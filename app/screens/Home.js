@@ -5,6 +5,7 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { setMessage } from '../tedux/slices/teastSlice';
 import Button from '../components/global/Button';
+import Input from '../components/global/input';
 export default function Home({ navigation }) {
     const [text, setText] = useState('');
     const message = useSelector((state) => state.messageData.message);
@@ -22,12 +23,16 @@ export default function Home({ navigation }) {
 
             <StatusBar style="light" />
             <View>
-                <TextInput
-                    style={{ height: 40, backgroundColor: '#fff' }}
-                    placeholder="Change your name"
+
+                <Input
+                    title='Email'
+                    secureTextEntry={false}
+                    placeholder='Enter your email'
                     onChangeText={newText => setText(newText)}
                     defaultValue={text}
-                />
+
+                ></Input>
+
             </View>
 
         </View>
@@ -36,7 +41,7 @@ export default function Home({ navigation }) {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: 'rgb(4, 5, 5)',
+        backgroundColor: '#e7e4ee',
         alignItems: 'center',
         justifyContent: 'center',
     }, text: {

@@ -8,7 +8,7 @@ export default function Button({ title, onPress, color = '#9693e2', textColor = 
 
     return (
         <View>
-            <TouchableOpacity style={{ backgroundColor: color, ...styles.button }} onPress={() => { onPress }} >
+            <TouchableOpacity style={{ backgroundColor: color, ...styles.button }} onPress={onPress} >
 
                 <Text style={{ color: textColor, ...styles.text }}>{title}</Text>
             </TouchableOpacity>
@@ -23,8 +23,7 @@ const styles = StyleSheet.create({
         paddingHorizontal: 15,
         paddingVertical: 6,
         borderRadius: 5,
-        marginVertical: 10
-
+        marginVertical: 10,
     }, text: {
 
         fontSize: 25,

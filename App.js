@@ -13,7 +13,7 @@ import { NavigationContainer } from '@react-navigation/native';
 export default function App() {
   return (
     <Provider store={store}>
-      <SafeAreaView style={{ flex: 1, backgroundColor: '#eae6dd' }}   >
+      <SafeAreaView style={{ flex: 1, }}   >
         <NavigationContainer>
           <MyStack />
         </NavigationContainer>
